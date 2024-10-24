@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Task Management System</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-style: italic;">Task Management System</h1>
+        <form id="taskForm">
+            <input type="text" id="task" placeholder="Enter Task" required>
+            <input type="date" id="deadline" required>
+            <select id="priority">
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+                <option value="Top">Top</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <h1 style="font-style: italic;">Tasks</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+        </table>
+    </div>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Edit Task</h2>
+            <p>New Task</p>
+            <input type="text" id="editTask" placeholder="Enter Task" required>
+            <p>New Deadline</p>
+            <input type="date" id="editDeadline" required>
+            <br>
+            <br>
+            <p>New Priority</p>
+            <select id="editPriority">
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+                <option value="Top">Top</option>
+            </select>
+            <br>
+            <br>
+            <button id="saveChanges">Save Changes</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Saurabh. All rights reserved.</p>
+    </footer>    
+    <script src="./js/script.js"></script>  
+</body>
+</html>
